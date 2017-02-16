@@ -860,6 +860,8 @@ h3,
 h4,
 .h4 {
   font-size: 24px;
+  border:solid;
+  border-radius: 50%;
 }
 h5,
 .h5 {
@@ -986,3 +988,14 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+
+h5, .h5 {
+  font-size: 16px;
+  font-family: "Cardo", "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #777777;
+  border-bottom: solid 1px transparent;
+}
+
+
+
