@@ -142,17 +142,8 @@ p.social a i {
   vertical-align: bottom;
   line-height: 38px;
 }
-p.social a.facebook {
-  background-color: #ccc;
-}
-p.social a.gplus {
-  background-color: #333;
-}
 p.social a.twitter {
   background-color: #aaa;
-}
-p.social a.instagram {
-  background-color: #999;
 }
 p.social a.email {
   background-color: #666;
@@ -804,6 +795,19 @@ label {
   background-color: #ffffff;
   border-color: #dddddd;
 }
+.skill {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 41px;
+  color: #000;
+  line-height: 200px;
+  text-align: center;
+  border: solid black 2px;
+  font-family: "Cardo", "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
 /* responsive utilities */
 @media (max-width: 767px) {
   .text-center-xs {
@@ -824,7 +828,20 @@ label {
     margin-left: auto;
     margin-right: auto;
   }
+  .skill{
+  width: 15vw;
+  height: 21vh;
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #000;
+  line-height: 21vh;
+  text-align: center;
+  border: solid black 2px;
+  font-family: "Cardo", "Times New Roman", Times, serif;
+  font-style: italic;
+  }
 }
+
 /* type */
 h1,
 h2,
@@ -996,6 +1013,9 @@ h5, .h5 {
   color: #777777;
   border-bottom: solid 1px transparent;
 }
+
+
+
 
 
 
