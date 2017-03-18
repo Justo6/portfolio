@@ -68,6 +68,9 @@ section {
 .img-responsive {
   margin: 0 auto;
 }
+.project_description{
+  color: red;
+}
 .section-inverse {
   color: #fff;
 }
