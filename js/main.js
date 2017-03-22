@@ -17,10 +17,10 @@ function sender_info () {
         "message": sender_email
     },
     success: function (response) {
-        console.log(response, "tammy is the bestessttt!")
+        console.log(response, "Success")
     },
         error: function(response){
-        console.log(response, "MIKE IS THE BEST")
+        console.log(response, "Failure")
         }
     });
 }

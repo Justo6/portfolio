@@ -1,6 +1,6 @@
 <?php
-require_once('php_mailer/email_config.php');
-require('php_mailer/phpmailer/PHPMailer/PHPMailerAutoload.php');
+require_once('email_config.php');
+require('phpMailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -34,8 +34,8 @@ $mail->addReplyTo($_POST["email"]/*email address of the person sending the messa
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = $_POST["subject"];
-$mail->Body    = $_POST["body"];
-$mail->AltBody = strip_tags($_POST["body"]);
+$mail->Body    = $_POST["message"];
+$mail->AltBody = strip_tags($_POST["message"]);
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
