@@ -157,13 +157,13 @@
             </div>
             <div class="row">
               <div class="col-sm-4">
-                <div class="box"><a href="img/venueFind.png" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="VenueFind" data-footer="<p>A mobile first application that uses geo location to find and display details on music venues near you. The data was received using Google maps, Flicker, and Youtube. I was part of a three man team that completed the project during a 48 hour hackathon. </p><a href='https://justo6.github.io/venueFind/' target='_blank'>Live link</a><a href='https://github.com/Justo6/venueFind' target='_blank'>link to code</>"><img src="img/venuefind.png" alt="" class="img-responsive"></a></div>
+                <div class="box"><a href="img/venueFind.png" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="VenueFind" data-footer="<p>A mobile first application that uses geo location to find and display details on music venues near you. The data was received using Google maps, Flicker, and Youtube. I was part of a three man team that completed the project during a 48 hour hackathon. </p><a href='https://justo6.github.io/venueFind/' target='_blank'>Live link</a><a href='https://github.com/Justo6/venueFind' target='_blank'>link to code</>"><img src="img/venueFind.png" alt="" class="img-responsive"></a></div>
               </div>
               <div class="col-sm-4">
                 <div class="box"><a href="img/MemoryMatch.png" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="MemoryMatch" data-footer="<p>A world explorer themed memory match game that displays accuracy, wins/losses, and total games played.</p><a href='https://justo6.github.io/memory_match/' target='_blank'>Live link</a><a href='https://github.com/Justo6/memory_match' target='_blank'>link to code</a>"><img src="img/MemoryMatch.png" alt="" class="img-responsive"></a></div>
               </div>
               <div class="col-sm-4">
-                <div class="box"><a href="img/Calculator1.png" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Calculator" data-footer="<p>A calculator that us capable of basic, comprehensive, and complex mathematical operations.</p><a id='live_link' href='https://justo6.github.io/voice_calculator/' target='_blank'>Live link</a><a id='code_link' href='https://github.com/Justo6/calculator' target='_blank'>link to code</a>"><img src="img/Calculator1.png" alt="" class="img-responsive" ></a></div>
+                <div class="box"><a href="img/calculator.png" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Calculator" data-footer="<p>A calculator that us capable of basic, comprehensive, and complex mathematical operations.</p><a id='live_link' href='https://justo6.github.io/voice_calculator/' target='_blank'>Live link</a><a id='code_link' href='https://justo6.github.io/voice_calculator/' target='_blank'>link to code</a>"><img src="img/calculator.png" alt="" class="img-responsive" ></a></div>
               </div>
             </div>
             <div class="row">
@@ -195,27 +195,27 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="name">Your firstname *</label>
-                          <input type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control">
+                          <label for="name">Your Name *</label>
+                          <input id="sender_name" type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="surname">Your lastname *</label>
-                          <input type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control">
+                          <label for="surname">Subject *</label>
+                          <input id="sender_subject" type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control">
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="surname">Your email *</label>
-                      <input type="email" name="email" placeholder="Enter your  email" required="required" class="form-control">
+                      <input id="sender_email" type="email" name="email" placeholder="Enter your  email" required="required" class="form-control">
                     </div>
                     <div class="form-group">
                       <label for="surname">Your message *</label>
-                      <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
+                      <textarea id="sender_message" rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
                     </div>
                     <div class="text-center">
-                      <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
+                      <input onclick="sender_info()" type="button" name="name" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form>
@@ -234,7 +234,7 @@
       <div class="container"> 
         <div class="row copyright">
           <div class="col-md-6">
-            <p>Michael Justo/MikeJusto6@gmail.com</p>
+            <p>Michael Justokjjh/MikeJusto6@gmail.com</p>
           </div>
           <div class="col-md-6">
 
@@ -256,10 +256,11 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <!-- google maps-->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
-    <script src="js/gmaps.js"></script>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>-->
+    <!--<script src="js/gmaps.js"></script>-->
     <!-- main script-->
     <script src="js/front.js"></script>
+    <script src="js/main.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
