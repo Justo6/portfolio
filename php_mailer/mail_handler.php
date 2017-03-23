@@ -1,4 +1,19 @@
 <?php
+// Variable to check
+$email = $_POST["email"];
+$message = filter_var($_POST["message"],FILTER_SANITIZE_STRING);
+$name= filter_var($_POST["name"],FILTER_SANITIZE_STRING;
+$subject= filter_var($_POST["subject"],FILTER_SANITIZE_STRING);
+
+// Validate email
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    echo("$email is a valid email address");
+} else {
+    echo("$email is not a valid email address");
+    // need to display message in field showing invalid email
+    exit();
+}
+
 require_once('email_config.php');
 require('phpMailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -21,8 +36,8 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = $_POST["email"];//your email sending account
-$mail->FromName = $_POST['name'];//your email sending account name
+$mail->From = $email;//your email sending account
+$mail->FromName = $name;//your email sending account name
 $mail->addAddress("mikejusto6@gmail.com", "Mike Justo"/*your email address, or the email the sender if you are sending confirmation*//*email address user name*/);     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo($_POST["email"]/*email address of the person sending the message, so you can reply*/);
@@ -33,9 +48,9 @@ $mail->addReplyTo($_POST["email"]/*email address of the person sending the messa
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = $_POST["subject"];
-$mail->Body    = $_POST["message"];
-$mail->AltBody = strip_tags($_POST["message"]);
+$mail->Subject = $subject;
+$mail->Body    = $message;
+$mail->AltBody = $message ;
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
@@ -43,4 +58,4 @@ if(!$mail->send()) {
 } else {
     echo 'Message has been sent';
 }
-?>
+

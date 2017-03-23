@@ -7,6 +7,10 @@ function sender_info () {
     var sender_subject= $("#sender_subject").val();
     var sender_email=$("#sender_email").val();
     var sender_message=$("#sender_message").val();
+
+
+
+
     $.ajax({
     url: 'php_mailer/mail_handler.php',
     type: 'post',
