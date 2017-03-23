@@ -2,7 +2,7 @@
 // Variable to check
 $email = $_POST["email"];
 $message = filter_var($_POST["message"],FILTER_SANITIZE_STRING);
-$name= filter_var($_POST["name"],FILTER_SANITIZE_STRING;
+$name= filter_var($_POST["name"],FILTER_SANITIZE_STRING);
 $subject= filter_var($_POST["subject"],FILTER_SANITIZE_STRING);
 
 // Validate email
@@ -58,4 +58,3 @@ if(!$mail->send()) {
 } else {
     echo 'Message has been sent';
 }
-
