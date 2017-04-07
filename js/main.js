@@ -8,16 +8,6 @@ function sender_info () {
     var sender_email=$("#sender_email").val();
     var sender_message=$("#sender_message").val();
 
-    if(sender_name.length<2 || sender_name === typeof(2)){
-       alert("sender name is invalid");
-    }
-    if(sender_name.length>=2){
-        for(var i=0; i<sender_name.length; i++){
-            if(isNaN(i)){
-                console.log("this is a letter");
-            }
-        }
-    }
 
 
     $.ajax({
