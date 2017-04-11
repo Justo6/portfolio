@@ -8,6 +8,25 @@ function sender_info () {
     var sender_email=$("#sender_email").val();
     var sender_message=$("#sender_message").val();
 
+    if(sender_name.length>=0){
+        for(var i=0; i<sender_name.length; i++){
+
+            if(sender_name.length===0){
+                console.log("please fill in name");
+            }
+            if (sender_name.length===1){
+                console.log("Name must contain more than one letter");
+            }
+            if(/^[a-zA-Z0-9- ]*$/.test(sender_name[i]) == false){
+                console.log("the name contains illegal characters");
+            }
+            if( need to check to make sure that no numbers are present){
+
+            }
+
+        }
+    }
+
 
 
     $.ajax({
