@@ -10,7 +10,6 @@ function sender_info () {
 
     if(sender_name.length>=0){
         for(var i=0; i<sender_name.length; i++){
-
             if(sender_name.length===0){
                 console.log("please fill in name");
             }
@@ -20,10 +19,9 @@ function sender_info () {
             if(/^[a-zA-Z0-9- ]*$/.test(sender_name[i]) == false){
                 console.log("the name contains illegal characters");
             }
-            if( need to check to make sure that no numbers are present){
-
+            if(!isNaN(sender_name)){
+                console.log("This input contains numbers");
             }
-
         }
     }
 
