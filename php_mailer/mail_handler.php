@@ -11,6 +11,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
 } else {
     echo("$email is not a valid email address");
     // need to display message in field showing invalid email
+
     exit();
 }
 

@@ -2,6 +2,7 @@
 
 },{}]},{},[1])  ;
 var sender_email=null;
+var reg =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 function sender_info () {
     var sender_name= $("#sender_name").val();
     var sender_subject= $("#sender_subject").val();
@@ -35,8 +36,6 @@ function sender_info () {
             }
         }
     }
-    validateEmail(sender_email);
-
     $.ajax({
     url: 'php_mailer/mail_handler.php',
     type: 'post',
@@ -47,7 +46,8 @@ function sender_info () {
         "message": sender_email
     },
     success: function (response) {
-        console.log(response, "Success")
+        console.log(response, "Success");
+
     },
         error: function(response){
         console.log(response, "Failure")
@@ -55,17 +55,13 @@ function sender_info () {
     });
 }
 
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    check();
-    return re.test(email);
-    
-}
+ function validate_email(){
+     var atpos = sender_email.indexOf("@");
+     var dotpos = sender_email.lastIndexOf(".");
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=sender_email.length) {
+         alert("Not a valid e-mail address");
+         return false;
+     }
 
-function check() {
-    if (validateEmail(email)) {
-        console.log("this is a valid email");
-    } else{
-        console.log("this is not valid email");
-    }
-}
+ }
+
